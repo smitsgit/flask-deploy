@@ -57,7 +57,7 @@ cd cd /apps/app_repo/app/ch15_deploy/final/
 pip install -r requirements.txt
 
 # Copy and enable the daemon
-cp /apps/app_repo/app/ch15_deploy/final/server/pypi.service /etc/systemd/system/pypi.service
+cp /apps/app_repo/server/pypi.service /etc/systemd/system/pypi.service
 
 systemctl start pypi
 systemctl status pypi
