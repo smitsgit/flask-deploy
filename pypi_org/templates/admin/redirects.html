@@ -1,0 +1,25 @@
+{% extends "shared/_layout.html" %}
+{% block title %}About PyPI Demo CMS Redirects {% endblock %}
+
+{% block main_content %}
+    <h1>Redirects</h1>
+    <a clas="btn btn-info btn-sm" href="/admin">&#171; Back to Admin Home </a>
+    <div class="admin-block">
+        <ul>
+            <li><a href="/admin/add_redirect">Add New redirects</a></li>
+            {% for redirect in redirects %}
+                <li>
+                    <a target="_blank" href="/{{ redirect.short_url }}" class="btn btn-sm btn-success"> Test </a>
+                    <a href="/admin/editing_redirect/{{ redirect.id }}" class="btn btn-sm btn-danger"> Edit </a>
+                    <span class="link">/{{ redirect.short_url }}</span>
+                    <span>{{ redirect.name }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block additional_css %}
+    <!-- this would be css from about.html -->
+    <link rel="stylesheet" href="/static/css/admin.css">
+{% endblock %}

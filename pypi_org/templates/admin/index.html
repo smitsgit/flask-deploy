@@ -1,0 +1,20 @@
+{% extends "shared/_layout.html" %}
+{% block title %}About PyPI Demo{% endblock %}
+
+{% block main_content %}
+    <h1>Admin Home</h1>
+    <div class="admin-block">
+        <div>
+            Control and update website from here.
+        </div>
+        <ul>
+            <li><a href="/admin/redirects"> View Redirects </a></li>
+            <li><a href="/admin/pages"> View Pages </a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block additional_css %}
+    <!-- this would be css from about.html -->
+    <link rel="stylesheet" href="/static/css/admin.css">
+{% endblock %}
